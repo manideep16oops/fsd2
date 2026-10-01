@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Users SPA</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    form { margin-bottom: 20px; }
+    input, button { padding: 8px; margin-right: 8px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    #msg { margin: 10px 0; font-weight: bold; }
+    .error { color: red; }
+    .success { color: green; }
+  </style>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <h2>Users - Single Page Application</h2>
+
+  <form id="userForm">
+    <input type="text" id="name" placeholder="Name" required />
+    <input type="email" id="email" placeholder="Email" required />
+    <button type="submit" id="submitBtn">Add User</button>
+    <button type="button" id="cancelEdit" style="display: none;">Cancel</button>
+  </form>
+
+  <div id="msg"></div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="usersBody"></tbody>
+  </table>
+</body>
+</html>
